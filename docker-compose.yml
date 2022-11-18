@@ -1,0 +1,18 @@
+version: '3.7'
+
+services:
+    app:
+        build:
+           context: .
+           dockerfile: docker/Dockerfile
+        container_name: ms-app
+        command: streamlit run front/app.py
+        restart: unless-stopped
+        environment:
+            - EDITOR=/bin/nano
+        volumes:
+            - ./:/home/appuser:rw,cached
+        ports:
+            - "8501:8501"
+            - "80:8501"
+            - "443:8501"

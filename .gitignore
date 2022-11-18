@@ -1,0 +1,16 @@
+.cache
+.config
+.local
+.idea
+.ipynb_checkpoints
+build/
+secrets
+notebooks
+logs
+venv
+tmp
+.sudo_as_admin_successful
+ekinox.egg-info
+ekinox/__pycache__
+front/__pycache__/
+tests/__pycache__/
